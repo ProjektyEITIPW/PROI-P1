@@ -7,6 +7,7 @@
 
 #include "LoanSimulator.h"
 #include "PrintAsCurrency.h"
+#include "Input.h"
 
 class LoanSimulatorInterface
 {

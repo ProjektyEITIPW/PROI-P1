@@ -6,40 +6,40 @@ void CreditEligibilityInterface::creditEligibilityInterfaceRun ()
   int tmpI;
   bool tmpB;
   CreditEligibility ce;
-  PrintAsCurrency p ( os );
+  PrintAsCurrency p;
+  Input in ( is, os );
 
   os << message[0];
-  is >> tmpD;
+  in.read( tmpD );
   ce.addToMonthlySetAside ( tmpD );
 
   os << message[1];
-  is >> tmpD;
+  in.read( tmpD );
   ce.subtractFromMonthlySetAside ( tmpD );
 
   os << message[2];
-  is >> tmpI;
+  in.read( tmpI );
   ce.setLoanPeriod ( tmpI );
 
   os << message[3];
-  is >> tmpB;
+  in.read( tmpB );
   ce.setIsMortgageOrCarLoan ( tmpB );
 
   if( tmpB )
   {
   os << message[4];
-  is >> tmpD;
+  in.read( tmpD );
   ce.setSavings ( tmpD );
   }
 
   os << message[5];
-  is >> tmpD;
+  in.read( tmpD );
   ce.setCommission ( tmpD );
 
-  os << message[6];
-  p.print(ce.getMaximumMonthlyExpense());
-  os << message[7];
-  p.print(ce.returnMaximumAmountToLoanWithDescendingInstallment());
-  os << message[8];
-  p.print(ce.returnMaximumAmountToLoanWithConstantInstallment());
-
+  p = ce.getMaximumMonthlyExpense();
+  os << message[6] << p;
+  p = ce.returnMaximumAmountToLoanWithDescendingInstallment();
+  os << message[7] << p;
+  p = ce.returnMaximumAmountToLoanWithConstantInstallment();
+  os << message[8] << p;
 }

@@ -7,6 +7,7 @@
 
 #include "PrintAsCurrency.h"
 #include "EarlierRepayment.h"
+#include "Input.h"
 
 class EarlierRepaymentInterface
 {

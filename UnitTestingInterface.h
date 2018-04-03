@@ -23,7 +23,7 @@ class UnitTestingInterface
     void UnitTestingInterfaceRun();
 
   public:
-    UnitTestingInterface(istream& in, ostream& out)
+    UnitTestingInterface ( istream& in, ostream& out )
       : is( in ),
         os( out )
     {

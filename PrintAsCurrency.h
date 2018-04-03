@@ -9,14 +9,18 @@ using namespace std;
 class PrintAsCurrency
 {
   private:
-    ostream &os;
+    double currency;
 
   public:
-    PrintAsCurrency(ostream &out)
-      : os( out )
-      {};
+    PrintAsCurrency ()
+    {};
+    PrintAsCurrency ( double val )
+    {
+      currency = val;
+    }
 
-    void print( double to_print );
+    friend
+    ostream& operator<< ( ostream &os, const PrintAsCurrency &toPrint ) ;
 };
 
 #endif // PRINTASCURRENCY_H

@@ -7,6 +7,7 @@
 
 #include "CreditEligibility.h"
 #include "PrintAsCurrency.h"
+#include "Input.h"
 
 using namespace std;
 

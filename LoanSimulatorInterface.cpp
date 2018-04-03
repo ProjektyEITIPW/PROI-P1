@@ -6,26 +6,27 @@ void LoanSimulatorInterface::LoanSimulatorInterfaceRun()
   int tmpI;
   vector <double> result;
   LoanSimulator ls;
-  PrintAsCurrency p ( os );
+  PrintAsCurrency p;
+  Input in ( is, os );
 
   os << message[0];
-  is >> tmpD;
+  in.read( tmpD );
   ls.addLoanAmount( tmpD );
 
   os << message[1];
-  is >> tmpD;
+  in.read( tmpD );
   ls.addLoanAmount( tmpD );
 
   os << message[2];
-  is >> tmpD;
+  in.read( tmpD );
   ls.setCommission( tmpD );
 
   os << message[3];
-  is >> tmpI;
+  in.read( tmpI );
   ls.setPeriod( tmpI );
 
   os << message [4];
-  is >> tmpI;
+  in.read( tmpI );
 
   if ( tmpI == 0 )
     result = ls.returnPaymentPlanWithDescendingInstallments();
@@ -38,7 +39,7 @@ void LoanSimulatorInterface::LoanSimulatorInterfaceRun()
   int i = 1;
   for ( vector <double>::iterator it = result.begin(); it != result.end(); ++it, ++i)
     {
-      os << endl << i << '\t';
-      p.print( result[i-1] );
+      p = result[i-1];
+      os << endl << i << '\t' << p;
     }
 }

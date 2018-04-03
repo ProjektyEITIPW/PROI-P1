@@ -1,6 +1,7 @@
 #include "PrintAsCurrency.h"
 
-void PrintAsCurrency::print( double to_print )
+ostream& operator<< ( ostream &os, const PrintAsCurrency &toPrint )
 {
-  os << setprecision (2) << fixed << to_print;
+  os << setprecision (2) << fixed << toPrint.currency;
+  return os;
 }
