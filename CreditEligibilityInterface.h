@@ -25,7 +25,7 @@ class CreditEligibilityInterface
       "\nWprowadz posiadane oszczednosci: ",
       "\nWprowadz laczna wysokosc oprocentowania i prowizji w ulamku dziesietnym: ",
       "\nMaksymalna kwota raty kredytu wynosi ",
-      "\nMaksymalna kwota kredytu z oplatami w wariancie:\n- raty malejacej wynosi ",
+      "\nMaksymalna kwota kredytu z oplatami poczatkowymi w wariancie:\n- raty malejacej wynosi ",
       "\n- raty stalej wynosi "
     };
     void creditEligibilityInterfaceRun ();
