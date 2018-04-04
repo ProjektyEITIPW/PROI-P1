@@ -9,8 +9,8 @@ bool UnitTesting::testCreditEligibility()
   ce.setIsMortgageOrCarLoan ( 1 );
   ce.setSavings ( 1200 );
   ce.setCommission ( 0.1 );
-  if( ! ( static_cast <int> ( ce.returnMaximumAmountToLoanWithDescendingInstallment() * 100 ) == 12940649 ) ) return 1;
-  if( ! ( static_cast <int> ( ce.returnMaximumAmountToLoanWithConstantInstallment() * 100 ) == 16767262)) return 1;
+  if( ! ( static_cast <int> ( ce.returnMaximumAmountToLoanWithDescendingInstallment() * 100 ) == 299999 ) ) return 1;
+  if( ! ( static_cast <int> ( ce.returnMaximumAmountToLoanWithConstantInstallment() * 100 ) == 388711 ) ) return 1;
   return 0;
 }
 
