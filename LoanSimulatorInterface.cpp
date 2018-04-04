@@ -4,6 +4,7 @@ void LoanSimulatorInterface::LoanSimulatorInterfaceRun()
 {
   double tmpD;
   int tmpI;
+  bool tmpB;
   vector <double> result;
   LoanSimulator ls;
   PrintAsCurrency p;
@@ -26,12 +27,12 @@ void LoanSimulatorInterface::LoanSimulatorInterfaceRun()
   ls.setPeriod( tmpI );
 
   os << message [4];
-  in.read( tmpI );
+  in.read( tmpB );
 
-  if ( tmpI == 0 )
+  if ( tmpB == 0 )
     result = ls.returnPaymentPlanWithDescendingInstallments();
 
-  if ( tmpI == 1 )
+  if ( tmpB == 1 )
     result = ls.returnPaymentPlanWithConstantInstallments();
 
   os << message [5];
