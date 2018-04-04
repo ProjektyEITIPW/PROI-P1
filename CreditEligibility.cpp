@@ -3,7 +3,7 @@
 void CreditEligibility::computeMaximumMonthlyExpense()
 {
   if ( isMortgageOrCarLoan == 1 )
-    maximumMonthlyExpense = min( monthlySetAside * loanPeriod, ( savings / 0.15 ) );
+    maximumMonthlyExpense = min( monthlySetAside,  savings / 0.15 / loanPeriod );
 
   else
     maximumMonthlyExpense = monthlySetAside;
