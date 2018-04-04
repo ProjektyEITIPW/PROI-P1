@@ -33,17 +33,17 @@ class CreditEligibility
 
     void setIsMortgageOrCarLoan (bool val)
     {
-      isMortgageOrCarLoan=val;
+      isMortgageOrCarLoan = val;
     };
 
     void setSavings (double val)
     {
-      savings=val;
+      savings = val;
     };
 
     void setCommission (double val)
     {
-      commission=val;
+      commission = val;
     };
 
     void computeMaximumMonthlyExpense();
