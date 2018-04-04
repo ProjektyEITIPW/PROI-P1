@@ -13,7 +13,7 @@ double CreditEligibility::returnMaximumAmountToLoanWithDescendingInstallment()
 {
   computeMaximumMonthlyExpense();
 
-  return maximumMonthlyExpense * loanPeriod/(1+loanPeriod*commission/12);
+  return maximumMonthlyExpense * loanPeriod / ( 1 + loanPeriod * commission / 12 );
 }
 
 double CreditEligibility::returnMaximumAmountToLoanWithConstantInstallment()
